@@ -186,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    // Top Product Slider
+                    // top product slider
                     SizedBox(
                       height: 200,
                       child: PageView.builder(
@@ -214,7 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                       ),
                     ),
-                    // Featured Products
+                
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
@@ -296,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                           ),
-                    // Product Categories
+                    // product categories
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
@@ -333,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                       ),
                     ),
-                    // New Arrivals
+                    // new arrivals
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
