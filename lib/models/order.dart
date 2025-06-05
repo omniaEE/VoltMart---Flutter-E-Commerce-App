@@ -24,10 +24,10 @@ class CartProvider with ChangeNotifier {
 }
 
 class Order {
-  final String id; // Unique order ID
-  final List<CartItem> items; // List of items in the order
-  final double totalPrice; // Total price of the order
-  final DateTime date; // Order placement date
+  final String id;
+  final List<CartItem> items; 
+  final double totalPrice; 
+  final DateTime date;
 
   Order({
     required this.id,
