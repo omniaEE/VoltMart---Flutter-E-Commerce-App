@@ -18,7 +18,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     final cartProvider = Provider.of<CartProvider>(context);
     final cartItems = cartProvider.items;
-    print('Cart items count: ${cartItems.length}'); // Debug log
+    // print('Cart items count: ${cartItems.length}');
 
     return Scaffold(
       appBar: AppBar(title: const Text('Your Cart')),
@@ -31,9 +31,9 @@ class _CartScreenState extends State<CartScreen> {
               itemBuilder: (context, index) {
                 final cartItem = cartItems[index];
                 final product = cartItem.product;
-                print(
-                  'Product ID type: ${product.id.runtimeType}',
-                ); // Debug log for ID type
+                // print(
+                //   'Product ID type: ${product.id.runtimeType}',
+                // ); 
 
                 return Card(
                   elevation: 2,
@@ -48,7 +48,7 @@ class _CartScreenState extends State<CartScreen> {
                       height: 50,
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) {
-                        print('Image load failed for ${product.image}: $error');
+                        // print('Image load failed for ${product.image}: $error');
                         return Image.asset(
                           'assets/images/img1.png',
                           width: 50,
@@ -81,7 +81,7 @@ class _CartScreenState extends State<CartScreen> {
                                         cartItem.quantity - 1,
                                       );
                                     }
-                                  : null, // Disable if quantity is 1
+                                  : null, 
                             ),
                             Text('${cartItem.quantity}'),
                             IconButton(
