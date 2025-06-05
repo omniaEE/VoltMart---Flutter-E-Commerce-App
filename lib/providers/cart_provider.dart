@@ -61,13 +61,13 @@ class CartProvider with ChangeNotifier {
       _orders.add(
         Order(
           id: DateTime.now().millisecondsSinceEpoch
-              .toString(), // Simple unique ID
-          items: List.from(_items), // Copy current cart items
+              .toString(), 
+          items: List.from(_items), 
           totalPrice: totalPrice,
           date: DateTime.now(),
         ),
       );
-      _items.clear(); // Clear the cart
+      _items.clear(); 
       notifyListeners();
     }
   }
