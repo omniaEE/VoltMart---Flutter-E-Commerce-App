@@ -3,8 +3,8 @@ class Product {
   final String name;
   final String category;
   final String description;
-  final double price; // Change to double
-  final int discount; // Keep as int, but ensure it's parsed correctly
+  final double price; 
+  final int discount; 
   final String image;
 
   Product({
@@ -25,8 +25,8 @@ class Product {
       description: json['description'],
       price: (json['price'] is int)
           ? json['price'].toDouble()
-          : double.parse(json['price'].toString()), // Ensure price is double
-      discount: json['discount'], // Assuming discount is always an int
+          : double.parse(json['price'].toString()), 
+      discount: json['discount'],
       image: json['image'],
     );
   }
