@@ -14,12 +14,12 @@ class CategoryProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Filter products based on the selected category and convert to List
+    // Filter products based on the selected category and convert it to list
     final filteredProducts = products
         .where((product) => product.category == category)
-        .toList() // Convert to List<Product>
-        .take(8) // Limit to 8 products
-        .toList(); // Convert to List<Product> again
+        .toList() 
+        .take(8)
+        .toList(); 
 
     return Scaffold(
       appBar: AppBar(title: Text(category)),
@@ -35,15 +35,15 @@ class CategoryProductsScreen extends StatelessWidget {
               ),
               itemCount: filteredProducts.length,
               itemBuilder: (context, index) {
-                final product = filteredProducts[index]; // Now this works
+                final product = filteredProducts[index]; 
                 return GestureDetector(
                   onTap: () {
-                    // Navigate to Product Details Page
+                   
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => ProductDetailsScreen(
-                          product: product, // Pass the selected product
+                          product: product,
                         ),
                       ),
                     );
@@ -59,7 +59,7 @@ class CategoryProductsScreen extends StatelessWidget {
                             width: double.infinity,
                             errorBuilder: (context, error, stackTrace) {
                               return Image.asset(
-                                'assets/images/img1.png', // Fallback image
+                                'assets/images/img1.png', //if the image link not work
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                               );
