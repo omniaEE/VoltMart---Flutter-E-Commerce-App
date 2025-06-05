@@ -36,11 +36,11 @@ class _LoginScreenState extends State<LoginScreen> {
       );
 
       if (response.statusCode == 200) {
-        // Parse user data from API response
+      
         final userData = jsonDecode(response.body);
         final user = User.fromJson(userData);
 
-        // Store user data in SharedPreferences if "Remember Me" is checked
+      
         final prefs = await SharedPreferences.getInstance();
         if (_rememberMe) {
           await prefs.setString(
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
         }
 
         if (!mounted) return;
-        // Navigate to home screen
+ 
         Navigator.pushReplacementNamed(context, AppConstants.homeRoute);
       } else {
         // Handle API error
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
         });
       }
     } catch (e) {
-      // Handle network or other errors
+ 
       setState(() {
         _loginFailed = true;
         _errorMessage = 'Failed to connect to the server. Please try again.';
