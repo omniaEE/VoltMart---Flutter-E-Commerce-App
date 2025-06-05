@@ -24,10 +24,10 @@ class ThemeToggleSwitch extends StatelessWidget {
         isDarkMode ? Icons.wb_sunny : Icons.nightlight_round,
         color: isDarkMode ? Colors.yellow[700] : Colors.blueGrey,
       ),
-      activeColor: Colors.yellow[700], // Matches sun icon for dark mode
-      inactiveThumbColor: Colors.blueGrey, // Matches moon icon for light mode
-      activeTrackColor: Colors.yellow[200], // Subtle track color for dark mode
-      inactiveTrackColor: Colors.grey[300], // Subtle track color for light mode
+      activeColor: Colors.yellow[700],
+      inactiveThumbColor: Colors.blueGrey, 
+      activeTrackColor: Colors.yellow[200], 
+      inactiveTrackColor: Colors.grey[300], 
     );
   }
 }
